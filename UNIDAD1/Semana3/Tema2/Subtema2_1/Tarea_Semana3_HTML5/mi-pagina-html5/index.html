@@ -46,7 +46,7 @@
         <section>
             <p><strong>Dispin</strong> venta de aromas y <em>embases</em>.</p>
       <!-- imagen desde repositorio -->
-            <img src="https://raw.githubusercontent.com/uea-jose/DesarrolloAppWEB/main/UNIDAD1/Semana3/Tema2/Subtema2_1/Tarea_Semana3_HTML5/mi-pagina-html5/2logo.PNG" alt="Logo de Esencias Dispin" width="100">
+            <img src="https://raw.githubusercontent.com/uea-jose/DesarrolloAppWEB/main/UNIDAD1/Semana3/Tema2/Subtema2_1/Tarea_Semana3_HTML5/mi-pagina-html5/2logo.PNG" alt="Logo de Esencias Dispin" width="50">
 
         </section>
 
@@ -56,8 +56,11 @@
         <section style="text-align: center;">
             <h3 style="font-size: 1.2rem; font-weight: normal;">¿No sabes qué perfume elegir?</h3>
             <div style="font-size: 1.5rem;">👇</div>
-            <video controls width="210" src="recomendaciones.mp4"></video>
-        </section>
+            <video controls width="210">
+            <source src="https://raw.githubusercontent.com/uea-jose/DesarrolloAppWEB/main/UNIDAD1/Semana3/Tema2/Subtema2_1/Tarea_Semana3_HTML5/mi-pagina-html5/recomendaciones.mp4" type="video/mp4">
+          </section>
+  
+</video>
 
         </section>
       <!-- contenido tipo articulo -->
@@ -124,13 +127,29 @@
             <li>Atomizador</li>
         </ul>
       </search>
+                   <!-- fromulario -->
+    <section>
+        <h3>Déjanos tu consulta</h3>
+        <form>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br>
+
+            <label for="correo">Correo electrónico:</label><br>
+            <input type="email" id="correo" name="correo" required><br>
+
+            <label for="mensaje">Tu consulta:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="30" required></textarea><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
 
 
- 
+
     </main>
-
+     <!-- Enlaces externo -->
     <footer>
-        <p>Quito; Av. Amazonas y Jorge Mendez - Antención 8x5</p>
+        <p>Visítanos en <a href="https://www.instagram.com" target="_blank">Instagram</a> para más novedades.</p>
     </footer>
 
 </body>
