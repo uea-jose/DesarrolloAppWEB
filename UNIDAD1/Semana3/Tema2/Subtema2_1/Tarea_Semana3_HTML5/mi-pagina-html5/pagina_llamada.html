@@ -3,23 +3,41 @@
 <head>
     <!-- Metadatos -->
     <meta charset="UTF-8">
-    <meta name="description" content="Mi Otra Pagina">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Catálogos de esencias">
+    <meta name="keywords" content="Catálogo, Esencias, Perfumes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Título -->
-    <title>Mi Otra Página Web</title>
+    <title>Catálogos de esencias</title>
 
     <!-- Hoja de estilo -->
     <link rel="stylesheet" href="style1.css">
 
     <!-- Script -->
     <script src="script.js" defer></script>
+    <style>
+        nav a {
+            display: inline-block;
+            margin-bottom: 20px; /* espacio debajo del link */
+            text-decoration: none;
+            color: blue;
+        }
+        figure {
+            display: inline-block;
+            margin: 10px 20px; /* espacio entre figuras */
+            text-align: center;
+        }
+        figcaption {
+            margin-top: 8px;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>Mi Otra Página Web</h1>
+        <h1>Catálogos de esencias</h1>
         <nav>
             <a href="index.html">Regresar a la página principal</a>
         </nav>
@@ -27,24 +45,19 @@
 
     <main>
         <section>
-            <h2>Tabla de ejemplo 2</h2>
-            <table border="1">
-                <tr>
-                    <th>Columna 1</th>
-                    <th>Columna 2</th>
-                    <th>Columna 3</th>
-                </tr>
-                <tr>
-                    <td>Dato 1</td>
-                    <td>Dato 2</td>
-                    <td>Dato 3</td>
-                </tr>
-            </table>
+            <figure>
+                <img src="catag_fem.png" alt="Catálogo Femenino" width="300">
+                <figcaption>Catálogo Femenino</figcaption>
+            </figure>
+            <figure>
+                <img src="catag_masculino.png" alt="Catálogo Masculino" width="300">
+                <figcaption>Catálogo Masculino</figcaption>
+            </figure>
         </section>
     </main>
 
     <footer>
-        <p>Mi Empresa de Observabilidad</p>
+        <p>Mi Empresa Contactos/</p>
         <p>Tel: 0959493834</p>
     </footer>
 
