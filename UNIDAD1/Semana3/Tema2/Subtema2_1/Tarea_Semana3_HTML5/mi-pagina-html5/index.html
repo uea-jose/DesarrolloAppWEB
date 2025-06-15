@@ -25,13 +25,39 @@
         <h1>Bienvenido a mi sitio web</h1>
     </header>
 
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">blog</a></li>
-        <li><a href="#">Contáctenos</a></li>
-      </ul>
+    <style> /* syle sin css en esta aparte*/
+        nav ul {
+          list-style: none;
+         padding: 0;
+         margin: 0;
+     }
+
+     nav li {
+          display: inline; /* para que los elementos se pongan en horizontal*/
+         margin-right: 15px; /* Espacio entre enlaces */
+    }
+
+        nav a {
+        text-decoration: none; /* Quita el subrayado de los enlaces */
+        color: black;           /* Cambia el color del texto del enlace a negro */
+        }
+
+        nav a:hover {
+         color: blue;    /* Cuando pasas el mouse por encima, cambia el color a azul*/
+        }
+
+    </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Productos</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contáctenos</a></li>
+    </ul>
+  </nav>
 
       <!-- A Search form is another common non-linear way to navigate through a website. -->
 
@@ -46,7 +72,7 @@
         <section>
             <p><strong>Dispin</strong> venta de aromas y <em>embases</em>.</p>
       <!-- imagen desde repositorio -->
-            <img src="https://raw.githubusercontent.com/uea-jose/DesarrolloAppWEB/main/UNIDAD1/Semana3/Tema2/Subtema2_1/Tarea_Semana3_HTML5/mi-pagina-html5/2logo.PNG" alt="Logo de Esencias Dispin" width="50">
+            <img src="2logo.PNG" alt="Logo de Esencias Dispin" width="50">
 
         </section>
 
@@ -57,7 +83,7 @@
             <h3 style="font-size: 1.2rem; font-weight: normal;">¿No sabes qué perfume elegir?</h3>
             <div style="font-size: 1.5rem;">👇</div>
             <video controls width="210">
-            <source src="https://raw.githubusercontent.com/uea-jose/DesarrolloAppWEB/main/UNIDAD1/Semana3/Tema2/Subtema2_1/Tarea_Semana3_HTML5/mi-pagina-html5/recomendaciones.mp4" type="video/mp4">
+            <source src="recomendaciones.mp4" type="video/mp4">
           </section>
   
 </video>
@@ -86,6 +112,7 @@
     <section>
         <h2>Aromas Principales</h2>
         <table border="1">
+            <caption>Lista de Perfumes y Precios</caption> 
             <thead>
                 <tr>
                     <th>Perfume</th>
