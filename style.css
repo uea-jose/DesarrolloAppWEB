@@ -1,0 +1,18 @@
+body {
+    background-color: lavender;
+}
+
+h1 {
+    color: darkblue;         /* Color oscuro para que contraste */
+    font-family: sans-serif; /* Fuente sin serif */
+    font-weight: normal;     /* Opcional: para que no sea negrita */
+}
+
+h2 {
+    font-weight: normal;     /* Para que no sea negrita */
+}
+
+small {
+    font-weight: normal;     /* Para que el texto pequeño también no sea negrita */
+    font-size: 0.8em;        /* Tamaño más pequeño, similar a h3 */
+}
