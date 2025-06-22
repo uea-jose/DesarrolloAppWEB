@@ -1,9 +1,9 @@
 body {
-    background-color: darkcyan;
+    background-color: bisque;
 }
 
 h1 {
-    color: darkgrey;         /* Color oscuro para que contraste */
+    color: d;         /* Color oscuro para que contraste */
     font-family: sans-serif; /* Fuente sin serif */
     font-weight: normal;     /* Opcional: para que no sea negrita */
 }
