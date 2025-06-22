@@ -1,11 +1,12 @@
 /* Estilo general (pantallas grandes - escritorio) */
 body {
     background-color: #f2f2f2;  /* Gris pastel claro */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     color: #2c3e50;
 }
+
 
 /* Botones */
 .pastel-button {
