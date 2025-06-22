@@ -1,9 +1,9 @@
 body {
-    background-color:lemonchiffon;
+    background-color: darkcyan;
 }
 
 h1 {
-    color: darkblue;         /* Color oscuro para que contraste */
+    color: darkgrey;         /* Color oscuro para que contraste */
     font-family: sans-serif; /* Fuente sin serif */
     font-weight: normal;     /* Opcional: para que no sea negrita */
 }
