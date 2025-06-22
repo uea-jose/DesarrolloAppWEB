@@ -7,6 +7,114 @@ body {
     color: #2c3e50;
 }
 
+/* Botones */
+.pastel-button {
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.4s;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-menta {
+    background: linear-gradient(to right, #a8e6cf, #81c784);
+}
+.btn-menta:hover {
+    background: linear-gradient(to right, #81c784, #66bb6a);
+    transform: scale(1.05);
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-azul {
+    background: linear-gradient(to right, #b3e5fc, #64b5f6);
+}
+.btn-azul:hover {
+    background: linear-gradient(to right, #64b5f6, #42a5f5);
+    transform: scale(1.05);
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-rosa {
+    background: linear-gradient(to right, #f8bbd0, #f06292);
+}
+.btn-rosa:hover {
+    background: linear-gradient(to right, #f06292, #ec407a);
+    transform: scale(1.05);
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-durazno {
+    background: linear-gradient(to right, #ffe0b2, #ffb74d);
+}
+.btn-durazno:hover {
+    background: linear-gradient(to right, #ffb74d, #ffa726);
+    transform: scale(1.05);
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* CSS Flexbox */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    margin: 2em 0;
+}
+.producto {
+    background: #e0f7fa;
+    padding: 1em;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.titulo-3d { /* TÍTULO PARA LA PARTE DE CSS Flexbox */
+    font-size: 1.8rem;
+    color: #4a90e2; /* Azul chévere */
+    text-shadow:
+        1px 1px 0 #ccc,
+        2px 2px 0 #bbb,
+        3px 3px 0 #999,
+        4px 4px 5px rgba(0,0,0,0.3);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* ESTILO PARA EL GRID CONTAINER */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    background-color: #f0f8ff; /* Azul muy suave pastel */
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item {
+    background: linear-gradient(135deg, #ffe0b2, #ffcc80); /* Durazno pastel */
+    color: #5d4037; /* Marrón suave */
+    padding: 18px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.grid-item:hover {
+    background: linear-gradient(135deg, #ffb74d, #ffa726); /* Durazno más intenso */
+    color: #3e2723; /* Marrón más oscuro */
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
 /* Títulos */
 h1 {
     color: #34495e;  /* Azul pastel oscuro */
@@ -50,7 +158,7 @@ a:hover {
 }
 
 /* ========================= */
-/* 🎯 Pantallas pequeñas (teléfonos) - hasta 600px */
+/* Pantallas pequeñas (teléfonos) - hasta 600px */
 @media (max-width: 600px) {
     body {
         background-color: #d1f2eb; /* Verde menta pastel */
@@ -59,7 +167,7 @@ a:hover {
 }
 
 /* ========================= */
-/* 🎯 Pantallas medianas (tabletas) - entre 601px y 1024px */
+/* Pantallas medianas (tabletas) - entre 601px y 1024px */
 @media (min-width: 601px) and (max-width: 1024px) {
     body {
         background-color: #fdebd0; /* Durazno pastel */
@@ -68,7 +176,7 @@ a:hover {
 }
 
 /* ========================= */
-/* 🎯 Pantallas grandes (escritorio) - desde 1025px en adelante */
+/* Pantallas grandes (escritorio) - desde 1025px en adelante */
 @media (min-width: 1025px) {
     body {
         background-color: #f2f2f2; /* Se conserva el gris pastel claro */

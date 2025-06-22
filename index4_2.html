@@ -56,30 +56,65 @@
             <li><a href="#">Contáctenos</a></li>
         </ul>
     </nav>
-
-    <form>
-        <input type="Buscar" name="q" placeholder="Busqueda" />
-        <input type="submit" value="Ir!" />
-    </form>
-
-    <!-- IMAGEN cenrtral -->
+     <!-- BOTONES -->
 <section style="text-align: center; margin: 2em 0;">
+  <button class="pastel-button btn-menta">Catálogo Completo</button>
+  <button class="pastel-button btn-azul">Contactar</button>
+  <button class="pastel-button btn-rosa">Crear Perfume</button>
+  <button class="pastel-button btn-durazno">Ver Promociones</button>
+</section>
+
+
+
+<!-- Contenedor flex para alinear a la izquierda y derecha -->
+<section style="display: flex; gap: 2em; align-items: flex-start;">
+
+  <!-- Flexbox  -->
+<section class="Productos" style="flex: 1;">
+  <h3 class="titulo-3d">Perfumes + cotizados</h3>
+  <div class="producto">Invictus</div>
+  <div class="producto">Spicebomb</div>
+  <div class="producto">Bleu de Chanel</div>
+</section>
+
+
+  <!-- Imagen y texto a la derecha -->
+  <section style="flex: 2; text-align: left;">
     <h2><strong>Alta perfumería</strong></h2>
     <p style="font-size: 1.1rem; color: #555;">
-        Sumérgete en una experiencia sensorial única con nuestras fragancias inspiradas en la elegancia,
-        la sofisticación y el arte de la <strong>perfumería</strong> artesanal. Somos tu destino en el mundo de la <strong>alta perfumería</strong>.
+      Sumérgete en una experiencia sensorial única con nuestras fragancias inspiradas en la elegancia,
+      la sofisticación y el arte de la <strong>perfumería</strong> artesanal. Somos tu destino en el mundo de la <strong>alta perfumería</strong>.
     </p>
-    <img src="aromas.png" alt="Aromas de Alta Perfumería" style="width: 689px; border-radius: 12px;">
+    <img src="aromas.png" alt="Aromas de Alta Perfumería" style="width: 100%; max-width: 689px; border-radius: 12px;">
+  </section>
+
+</section>
+
+
+
+    <p><a href="pagina_llamada.html">Ver_Catalogo</a></p>
+</section>
+
+
+
+  <!--GRID CONTENDOR -->
+<section>
+  <div class="grid-container">
+    <div class="grid-item">Esencias Naturales</div>
+    <div class="grid-item">Aditivos Aromáticos</div>
+    <div class="grid-item">Frascos de Vidrio</div>
+    <div class="grid-item">Atomizadores</div>
+    <div class="grid-item">Alcohol Desodorizado</div>
+    <div class="grid-item">Filtros y Gotero</div>
+  </div>
 </section>
     <main>
-        <section>
-            <p><strong>Dispin</strong> venta de aromas y <em>embases</em>.</p>
-        </section>
+   
+      
+  <style>
 
-        <section>
-            <p><a href="pagina_llamada.html">Ver_Catalogo</a></p>
-        </section>
 
+  </style>
         <!-- contenido tipo articulo -->
         <article>
             <section>
@@ -126,40 +161,7 @@
             </table>
         </section>
 
-        <section>
-            <h4>Pasos para crear perfume</h4>
-            <ol>
-                <li>Selecciona tu escencia</li>
-                <li>Mescla con alchol desodorizado</li>
-                <li>Deja reposar min 7 días (14 recomendable)</li>
-            </ol>
-        </section>
 
-        <search>
-            <h4>Materiales que usamos</h4>
-            <ul>
-                <li>Frasco ecencial 30 ml</li>
-                <li>Gotero e inyeccion</li>
-                <li>Frasco de vidrio o personalizado</li>
-                <li>Atomizador</li>
-            </ul>
-        </search>
-
-        <section>
-            <h3>Déjanos tu consulta</h3>
-            <form>
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre" required><br>
-
-                <label for="correo">Correo electrónico:</label><br>
-                <input type="email" id="correo" name="correo" required><br>
-
-                <label for="mensaje">Tu consulta:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" cols="30" required></textarea><br>
-
-                <input type="submit" value="Enviar">
-            </form>
-        </section>
     </main>
 
     <footer>

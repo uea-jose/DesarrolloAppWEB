@@ -16,3 +16,8 @@ small {
     font-weight: normal;     /* Para que el texto pequeño también no sea negrita */
     font-size: 0.8em;        /* Tamaño más pequeño, similar a h3 */
 }
+
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.5);
+    }
