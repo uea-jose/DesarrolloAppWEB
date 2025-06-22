@@ -1,3 +1,4 @@
+/* Estilo general (pantallas grandes - escritorio) */
 body {
     background-color: #f2f2f2;  /* Gris pastel claro */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,8 +7,9 @@ body {
     color: #2c3e50;
 }
 
+/* Títulos */
 h1 {
-    color: #34495e;            /* Azul pastel oscuro */
+    color: #34495e;  /* Azul pastel oscuro */
     font-weight: normal;
     margin-top: 1em;
     text-align: center;
@@ -15,26 +17,29 @@ h1 {
 
 h2 {
     font-weight: normal;
-    color: #5d6d7e;            /* Gris azulado pastel */
+    color: #5d6d7e;  /* Gris azulado pastel */
 }
 
-small { /* texto mas pequeño gris*/
+/* Texto pequeño */
+small {
     font-weight: normal;
     font-size: 0.8em;
-    color: #7f8c8d;            
+    color: #7f8c8d;  /* Gris medio */
 }
 
-a { /*anchor azul para enlaces  */
-    color: #3498db;            
+/* Enlaces */
+a {
+    color: #3498db;  /* Azul pastel */
     text-decoration: none;
     transition: color 0.3s;
 }
 
-/*mouse pasar ensima    */
+/* Efecto hover en enlaces */
 a:hover {
-    color: #9b59b6;
+    color: #9b59b6;  /* Lila pastel */
 }
 
+/* Contenedor principal */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -42,4 +47,31 @@ a:hover {
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================= */
+/* 🎯 Pantallas pequeñas (teléfonos) - hasta 600px */
+@media (max-width: 600px) {
+    body {
+        background-color: #d1f2eb; /* Verde menta pastel */
+        font-size: 14px;
+    }
+}
+
+/* ========================= */
+/* 🎯 Pantallas medianas (tabletas) - entre 601px y 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        background-color: #fdebd0; /* Durazno pastel */
+        font-size: 16px;
+    }
+}
+
+/* ========================= */
+/* 🎯 Pantallas grandes (escritorio) - desde 1025px en adelante */
+@media (min-width: 1025px) {
+    body {
+        background-color: #f2f2f2; /* Se conserva el gris pastel claro */
+        font-size: 18px;
+    }
 }

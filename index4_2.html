@@ -18,163 +18,150 @@
 
     <!-- Script -->
     <script src="script.js" defer></script>
-</head>
-<body>
 
-    <header>
-        <h1>Bienvenido a mi sitio web</h1>
-    </header>
-
-    <style> /* syle sin css en esta aparte*/
+    <!-- Estilo interno -->
+    <style>
         nav ul {
-          list-style: none;
-         padding: 0;
-         margin: 0;
-     }
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-     nav li {
-          display: inline; /* para que los elementos se pongan en horizontal*/
-         margin-right: 15px; /* Espacio entre enlaces */
-    }
+        nav li {
+            display: inline;
+            margin-right: 15px;
+        }
 
         nav a {
-        text-decoration: none; /* Quita el subrayado de los enlaces */
-        color: black;           /* Cambia el color del texto del enlace a negro */
+            text-decoration: none;
+            color: black;
         }
 
         nav a:hover {
-         color: blue;    /* Cuando pasas el mouse por encima, cambia el color a azul*/
+            color: blue;
         }
-
     </style>
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Productos</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Contáctenos</a></li>
-    </ul>
-  </nav>
+    <header>
+        <strong><h1>Perfumeria Disproquim</h1></strong> 
+    </header>
 
-      <!-- A Search form is another common non-linear way to navigate through a website. -->
-
-      <form>
-        <input type="Buscar" name="q" placeholder="Busqueda" />
-        <input type="submit" value="Ir!" />
-      </form>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contáctenos</a></li>
+        </ul>
     </nav>
 
+    <form>
+        <input type="Buscar" name="q" placeholder="Busqueda" />
+        <input type="submit" value="Ir!" />
+    </form>
 
+    <!-- IMAGEN cenrtral -->
+<section style="text-align: center; margin: 2em 0;">
+    <h2><strong>Alta perfumería</strong></h2>
+    <p style="font-size: 1.1rem; color: #555;">
+        Sumérgete en una experiencia sensorial única con nuestras fragancias inspiradas en la elegancia,
+        la sofisticación y el arte de la <strong>perfumería</strong> artesanal. Somos tu destino en el mundo de la <strong>alta perfumería</strong>.
+    </p>
+    <img src="aromas.png" alt="Aromas de Alta Perfumería" style="width: 689px; border-radius: 12px;">
+</section>
     <main>
         <section>
             <p><strong>Dispin</strong> venta de aromas y <em>embases</em>.</p>
-      <!-- imagen desde repositorio -->
-            <img src="2logo.PNG" alt="Logo de Esencias Dispin" width="50">
-
         </section>
 
         <section>
             <p><a href="pagina_llamada.html">Ver_Catalogo</a></p>
         </section>
-        <section style="text-align: center;">
-            <h3 style="font-size: 1.2rem; font-weight: normal;">¿No sabes qué perfume elegir?</h3>
-            <div style="font-size: 1.5rem;">👇</div>
-            <video controls width="210">
-            <source src="recomendaciones.mp4" type="video/mp4">
-          </section>
-  
-</video>
 
-        </section>
-      <!-- contenido tipo articulo -->
-      <article>
+        <!-- contenido tipo articulo -->
+        <article>
+            <section>
+                <h3>Misión</h3>
+                <p>
+                    Crear perfumes artesanales de calidad, personalizados y accesibles, usando esencias
+                    originales y atención cercana.
+                </p>
+            </section>
 
+            <section>
+                <h3>Visión</h3>
+                <p>
+                    Ser una marca reconocida en Ecuador por perfumes únicos y artesanales, con crecimiento
+                    en redes y ventas onlin.
+                </p>
+            </section>
+        </article>
 
-            <h3>Misión</h3>
-            <p>
-                Crear perfumes artesanales de calidad, personalizados y accesibles, usando esencias
-                originales y atención cercana.
-            </p>
+        <section>
+            <h2>Aromas Principales</h2>
+            <table border="1">
+                <caption>Lista de Perfumes y Precios</caption> 
+                <thead>
+                    <tr>
+                        <th>Perfume</th>
+                        <th>Precio (USD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Invictus Paco Rabanne</td>
+                        <td>15.00</td>
+                    </tr>
+                    <tr>
+                        <td>Spicebomb Extreme</td>
+                        <td>14.50</td>
+                    </tr>
+                    <tr>
+                        <td>Bleu de Chanel</td>
+                        <td>16.50</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <section>
-            <h3>Visión</h3>
-            <p>
-                Ser una marca reconocida en Ecuador por perfumes únicos y artesanales, con crecimiento
-                en redes y ventas onlin.
-            </p>
+            <h4>Pasos para crear perfume</h4>
+            <ol>
+                <li>Selecciona tu escencia</li>
+                <li>Mescla con alchol desodorizado</li>
+                <li>Deja reposar min 7 días (14 recomendable)</li>
+            </ol>
         </section>
-      </article>
 
-    <section>
-        <h2>Aromas Principales</h2>
-        <table border="1">
-            <caption>Lista de Perfumes y Precios</caption> 
-            <thead>
-                <tr>
-                    <th>Perfume</th>
-                    <th>Precio (USD)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Invictus Paco Rabanne</td>
-                    <td>15.00</td>
-                </tr>
-                <tr>
-                    <td>Spicebomb Extreme</td>
-                    <td>14.50</td>
-                </tr>
-                <tr>
-                    <td>Bleu de Chanel</td>
-                    <td>16.50</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    <!-- Lista oredenada -->
-     <section>
-        <h4>Pasos para crear perfume</h4>
-        <ol>
-            <li>Selecciona tu escencia</li>
-            <li>Mescla con alchol desodorizado</li>
-            <li>Deja reposar min 7 días (14 recomendable)</li>
-        </ol>
-     </section>
-     <!-- Lista desoredenada -->
-      <search>
-        <h4>Materiales que usamos</h4>
-        <ul>
-            <li>Frasco ecencial 30 ml</li>
-            <li>Gotero e inyeccion</li>
-            <li>Frasco de vidrio o personalizado</li>
-            <li>Atomizador</li>
-        </ul>
-      </search>
-                   <!-- fromulario -->
-    <section>
-        <h3>Déjanos tu consulta</h3>
-        <form>
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" required><br>
+        <search>
+            <h4>Materiales que usamos</h4>
+            <ul>
+                <li>Frasco ecencial 30 ml</li>
+                <li>Gotero e inyeccion</li>
+                <li>Frasco de vidrio o personalizado</li>
+                <li>Atomizador</li>
+            </ul>
+        </search>
 
-            <label for="correo">Correo electrónico:</label><br>
-            <input type="email" id="correo" name="correo" required><br>
+        <section>
+            <h3>Déjanos tu consulta</h3>
+            <form>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br>
 
-            <label for="mensaje">Tu consulta:</label><br>
-            <textarea id="mensaje" name="mensaje" rows="4" cols="30" required></textarea><br>
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="correo" name="correo" required><br>
 
-            <input type="submit" value="Enviar">
-        </form>
-    </section>
+                <label for="mensaje">Tu consulta:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="30" required></textarea><br>
 
-
-
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
     </main>
-     <!-- Enlaces externo -->
+
     <footer>
         <p>Visítanos en <a href="https://www.instagram.com" target="_blank">Instagram</a> para más novedades.</p>
     </footer>
