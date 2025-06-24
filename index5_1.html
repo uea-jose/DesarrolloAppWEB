@@ -73,30 +73,33 @@
       </div>
     </div>
 
-    <!-- ✅ Galería de imágenes con Bootstrap y etiquetas <article> -->
-    <main id="gallery" class="row justify-content-center">
-      <!-- ✅ Artículo con imagen por defecto: Invictus -->
-      <article class="col-12 col-md-4 text-center mb-4">
-        <h5 class="mb-2 text-primary fw-bold">Invictus</h5>
-        <img src="invictus.png" alt="Invictus" />
-        <!-- ✅ Botón para agregar perfume al carrito -->
-        <button class="btn btn-sm btn-danger mt-2" data-perfume="Invictus" data-precio="20">Agregar al Carrito</button>
-      </article>
+<!-- ✅ Galería de imágenes con Bootstrap y etiquetas <article> -->
+<main id="gallery" class="row justify-content-center">
+  <!-- ✅ Artículo con imagen por defecto: Invictus -->
+  <article class="col-12 col-md-4 text-center mb-4">
+    <h5 class="mb-1 text-primary fw-bold">Invictus</h5>
+    <p class="text-muted mb-2">$20</p> <!-- ✅ Precio visible -->
+    <img src="invictus.png" alt="Invictus" class="mx-auto d-block" />
+    <button class="btn btn-sm btn-danger mt-2" data-perfume="Invictus" data-precio="20">Agregar al Carrito</button>
+  </article>
 
-      <!-- ✅ Segundo artículo: Spicebom -->
-      <article class="col-12 col-md-4 text-center mb-4">
-        <h5 class="mb-2 text-warning fw-bold">Spicebom</h5>
-        <img src="spicebom.png" alt="Spicebom" />
-        <button class="btn btn-sm btn-warning mt-2 text-white" data-perfume="Spicebom" data-precio="15">Agregar al Carrito</button>
-      </article>
+  <!-- ✅ Segundo artículo: Spicebom -->
+  <article class="col-12 col-md-4 text-center mb-4">
+    <h5 class="mb-1 text-warning fw-bold">Spicebom</h5>
+    <p class="text-muted mb-2">$15</p> <!-- ✅ Precio visible -->
+    <img src="spicebom.png" alt="Spicebom" class="mx-auto d-block" />
+    <button class="btn btn-sm btn-warning mt-2 text-white" data-perfume="Spicebom" data-precio="15">Agregar al Carrito</button>
+  </article>
 
-      <!-- ✅ Tercer artículo: Blue Chanel -->
-      <article class="col-12 col-md-4 text-center mb-4">
-        <h5 class="mb-2 text-success fw-bold">Blue Chanel</h5>
-        <img src="blueChanel.png" alt="Blue Chanel" />
-        <button class="btn btn-sm btn-success mt-2" data-perfume="Blue Chanel" data-precio="20">Agregar al Carrito</button>
-      </article>
-    </main>
+  <!-- ✅ Tercer artículo: Blue Chanel -->
+  <article class="col-12 col-md-4 text-center mb-4">
+    <h5 class="mb-1 text-success fw-bold">Blue Chanel</h5>
+    <p class="text-muted mb-2">$20</p> <!-- ✅ Precio visible -->
+    <img src="blueChanel.png" alt="Blue Chanel" class="mx-auto d-block" />
+    <button class="btn btn-sm btn-success mt-2" data-perfume="Blue Chanel" data-precio="20">Agregar al Carrito</button>
+  </article>
+</main>
+
 
     <!-- ✅ Sección para mostrar carrito de compras -->
     <section class="container mt-5">
