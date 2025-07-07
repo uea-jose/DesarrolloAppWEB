@@ -1,174 +1,240 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ===== GALERÍA DE IMÁGENES =====
-  const gallery = document.getElementById("gallery");
-  const addBtn = document.getElementById("add-image-btn");
-  const removeBtn = document.getElementById("remove-image-btn");
-  const imageUrlInput = document.getElementById("image-url");
-  let selectedImage = null;
+  
+    // ===== VALIDACIÓN DE FORMULARIO DINÁMICA =====
+const form = document.getElementById("registroForm");
+const usuario = document.getElementById("usuario");
+const nombre = document.getElementById("nombre");
+const contrasena = document.getElementById("contrasena");
+const confirmarContrasena = document.getElementById("confirmarContrasena");
 
-  function selectImage(img) {
-    if (selectedImage) selectedImage.classList.remove("selected");
-    selectedImage = img;
-    selectedImage.classList.add("selected");
+const usuarioFeedback = document.getElementById("usuarioFeedback");
+const nombreFeedback = document.getElementById("nombreFeedback");
+const contrasenaFeedback = document.getElementById("contrasenaFeedback");
+const confirmarContrasenaFeedback = document.getElementById("confirmarContrasenaFeedback");
+
+// Validaciones con expresiones regulares
+const regexUsuario = /^[a-zA-Z0-9_]{4,16}$/;
+const regexNombre = /^[a-zA-Z\s]+$/;
+const regexContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,32}$/;
+
+// Usuario
+usuario.addEventListener("input", () => {
+  if (regexUsuario.test(usuario.value)) {
+    usuario.classList.remove("is-invalid");
+    usuario.classList.add("is-valid");
+    usuarioFeedback.textContent = "";
+  } else {
+    usuario.classList.remove("is-valid");
+    usuario.classList.add("is-invalid");
+    usuarioFeedback.textContent = "Debe tener de 4 a 16 caracteres. Solo letras, números y guion bajo.";
+  }
+});
+
+// Nombre
+nombre.addEventListener("input", () => {
+  if (regexNombre.test(nombre.value)) {
+    nombre.classList.remove("is-invalid");
+    nombre.classList.add("is-valid");
+    nombreFeedback.textContent = "";
+  } else {
+    nombre.classList.remove("is-valid");
+    nombre.classList.add("is-invalid");
+    nombreFeedback.textContent = "El nombre solo puede contener letras y espacios.";
+  }
+});
+
+// Contraseña
+contrasena.addEventListener("input", () => {
+  if (regexContrasena.test(contrasena.value)) {
+    contrasena.classList.remove("is-invalid");
+    contrasena.classList.add("is-valid");
+    contrasenaFeedback.textContent = "";
+  } else {
+    contrasena.classList.remove("is-valid");
+    contrasena.classList.add("is-invalid");
+    contrasenaFeedback.textContent = "8-32 caracteres, al menos 1 mayúscula, 1 minúscula, 1 número y 1 símbolo.";
+  }
+});
+
+// Confirmar contraseña
+confirmarContrasena.addEventListener("input", () => {
+  if (confirmarContrasena.value === contrasena.value && contrasena.value !== "") {
+    confirmarContrasena.classList.remove("is-invalid");
+    confirmarContrasena.classList.add("is-valid");
+    confirmarContrasenaFeedback.textContent = "";
+  } else {
+    confirmarContrasena.classList.remove("is-valid");
+    confirmarContrasena.classList.add("is-invalid");
+    confirmarContrasenaFeedback.textContent = "Las contraseñas no coinciden.";
+  }
+});
+
+// Validar todo antes de enviar
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const usuarioOk = regexUsuario.test(usuario.value);
+  const nombreOk = regexNombre.test(nombre.value);
+  const contrasenaOk = regexContrasena.test(contrasena.value);
+  const confirmarOk = confirmarContrasena.value === contrasena.value;
+
+  if (usuarioOk && nombreOk && contrasenaOk && confirmarOk) {
+    alert("Formulario válido. Enviando...");
+    form.reset();
+    [usuario, nombre, contrasena, confirmarContrasena].forEach(input => {
+      input.classList.remove("is-valid", "is-invalid");
+    });
+  } else {
+    alert("Revisa los campos en rojo.");
+  }
+});
+
+
+
+
+ // ===== VALIDACIÓN DE CORREO L =====
+
+const emailInput = document.getElementById("email");
+const feedback = document.getElementById("feedback");
+
+// Diccionario de dominios mal escritos y su corrección
+const sugerencias = {
+  "gmal.com": "gmail.com",
+  "gmial.com": "gmail.com",
+  "hotnail.com": "hotmail.com",
+  "hotmial.com": "hotmail.com",
+  "yahho.com": "yahoo.com",
+  "yaho.com": "yahoo.com"
+};
+
+emailInput.addEventListener("input", () => {
+  const value = emailInput.value.trim();
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const partes = value.split("@");
+
+  if (partes.length === 2) {
+    const usuario = partes[0];
+    const dominio = partes[1].toLowerCase();
+
+    if (sugerencias[dominio]) {
+      const sugerido = `${usuario}@${sugerencias[dominio]}`;
+      feedback.innerHTML = `
+        <span style="color: red;">
+          ¿Quisiste decir <strong>${sugerido}</strong>?
+        </span>
+      `;
+      emailInput.classList.add("is-invalid");
+      emailInput.classList.remove("is-valid");
+      return; // Evita continuar con validación si hay sugerencia
+    }
   }
 
-  // Marcar como seleccionables las imágenes por defecto
-  document.querySelectorAll("#gallery img").forEach((img) => {
-    img.style.cursor = "pointer";
-    img.addEventListener("click", () => selectImage(img));
-  });
-
-  // Agregar nueva imagen a la galería
-  addBtn.addEventListener("click", () => {
-    const url = imageUrlInput.value.trim();
-    if (!url.match(/\.(jpeg|jpg|png|gif|bmp|webp)$/i)) {
-      alert("URL no válida. Debe ser imagen .jpg, .png, etc.");
-      return;
-    }
-
-    const newImg = document.createElement("img");
-    newImg.src = url;
-    newImg.alt = "Imagen agregada";
-    newImg.style.maxHeight = "150px";
-    newImg.style.margin = "10px";
-    newImg.style.cursor = "pointer";
-    newImg.style.borderRadius = "8px";
-
-    newImg.addEventListener("click", () => selectImage(newImg));
-    selectImage(newImg);
-
-    const newArticle = document.createElement("article");
-    newArticle.className = "col-12 col-md-4 text-center mb-4";
-    newArticle.appendChild(newImg);
-    gallery.appendChild(newArticle);
-
-    imageUrlInput.value = "";
-  });
-
-  // Eliminar imagen seleccionada
-  removeBtn.addEventListener("click", () => {
-    if (!selectedImage) {
-      alert("Selecciona una imagen primero.");
-      return;
-    }
-    const parentArticle = selectedImage.closest("article");
-    if (parentArticle) {
-      gallery.removeChild(parentArticle);
-    } else {
-      selectedImage.remove();
-    }
-    selectedImage = null;
-  });
-
-  // ===== CARRITO DE COMPRAS =====
-  const carrito = document.querySelector("#carrito");
-  const template = document.querySelector("#template");
-  const footer = document.querySelector("#footer");
-  const templateFooter = document.querySelector("#templateFooter");
-  const fragment = document.createDocumentFragment();
-  let carritoArray = [];
-
-  document.addEventListener("click", (e) => {
-    if (e.target.matches("button[data-perfume]")) {
-      agregarCarrito(e);
-    }
-    if (e.target.matches(".list-group-item .btn-success")) {
-      aumentarCantidad(e);
-    }
-    if (e.target.matches(".list-group-item .btn-danger")) {
-      disminuirCantidad(e);
-    }
-  });
-
-  const agregarCarrito = (e) => {
-    const id = e.target.dataset.perfume;
-    const precio = parseInt(e.target.dataset.precio, 10);
-    const producto = { titulo: id, id, cantidad: 1, precio };
-
-    const index = carritoArray.findIndex((item) => item.id === id);
-    if (index === -1) {
-      carritoArray.push(producto);
-    } else {
-      carritoArray[index].cantidad++;
-    }
-
-    pintarCarrito();
-  };
-
-  const pintarCarrito = () => {
-    carrito.textContent = "";
-    carritoArray.forEach((item) => {
-      const clone = template.content.cloneNode(true);
-      clone.querySelector(".lead").textContent = item.titulo + ` - $${item.precio * item.cantidad}`;
-      clone.querySelector(".rounded-pill").textContent = item.cantidad;
-      clone.querySelector(".btn-success").dataset.id = item.id;
-      clone.querySelector(".btn-danger").dataset.id = item.id;
-      fragment.appendChild(clone);
-    });
-    carrito.appendChild(fragment);
-    pintarFooter();
-  };
-
-  const pintarFooter = () => {
-    footer.querySelectorAll(".card").forEach((card) => card.remove());
-
-    const total = carritoArray.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
-    if (total === 0) return;
-
-    const clone = templateFooter.content.cloneNode(true);
-    clone.querySelector("p span").textContent = total;
-    footer.appendChild(clone);
-  };
-
-  const aumentarCantidad = (e) => {
-    const id = e.target.dataset.id;
-    carritoArray = carritoArray.map((item) => {
-      if (item.id === id) item.cantidad++;
-      return item;
-    });
-    pintarCarrito();
-  };
-
-  const disminuirCantidad = (e) => {
-    const id = e.target.dataset.id;
-    carritoArray = carritoArray.filter((item) => {
-      if (item.id === id) {
-        item.cantidad--;
-        return item.cantidad > 0;
-      }
-      return true;
-    });
-    pintarCarrito();
-  };
-
-  // ===== EVENTOS DEL MOUSE =====
-  document.getElementById("btnClick").addEventListener("click", () => {
-    alert("Hiciste CLICK");
-  });
-
-  document.getElementById("btnRightClick").addEventListener("contextmenu", (e) => {
-    e.preventDefault();
-    alert("Click derecho detectado");
-  });
-
-  document.getElementById("btnMouseOver").addEventListener("mouseover", () => {
-    alert("Mouse OVER: entraste al botón");
-  });
-
-  // ===== EVENTOS DEL TECLADO =====
-  const input = document.getElementById("keyboardInput");
-  const output = document.getElementById("keyboardOutput");
-
-  input.addEventListener("keydown", (event) => {
-    output.textContent = `Presionaste la tecla "${event.key}"`;
-  });
-
-  input.addEventListener("keyup", (event) => {
-    if (event.key === "Backspace") {
-      output.textContent = `Borraste la tecla "${event.key}"`;
-    }
-  });
+  if (emailPattern.test(value)) {
+    feedback.textContent = "Correo válido";
+    feedback.style.color = "green";
+    emailInput.classList.add("is-valid");
+    emailInput.classList.remove("is-invalid");
+  } else {
+    feedback.textContent = "Correo no válido";
+    feedback.style.color = "red";
+    emailInput.classList.add("is-invalid");
+    emailInput.classList.remove("is-valid");
+  }
 });
+
+
+
+
+// ===== EVENTOS DEL teléfono, edad y botón Submit =====
+
+// EDAD
+const edad = document.getElementById("edad");
+const edadFeedback = document.getElementById("edadFeedback");
+
+// TELÉFONO
+const telefono = document.getElementById("telefono");
+const telefonoFeedback = document.getElementById("telefonoFeedback");
+const regexTelefono = /^\+?\d{7,15}$/;
+
+// BOTÓN DE ENVÍO
+const btnEnviar = document.getElementById("btnEnviar");
+
+// Validación de edad
+edad.addEventListener("input", () => {
+  const valor = parseInt(edad.value);
+  if (!isNaN(valor) && valor >= 18) {
+    edad.classList.remove("is-invalid");
+    edad.classList.add("is-valid");
+    edadFeedback.textContent = "";
+  } else {
+    edad.classList.remove("is-valid");
+    edad.classList.add("is-invalid");
+    edadFeedback.textContent = "Debes tener al menos 18 años.";
+  }
+  validarFormularioCompleto();
+});
+
+// Validación de teléfono
+telefono.addEventListener("input", () => {
+  if (regexTelefono.test(telefono.value.trim())) {
+    telefono.classList.remove("is-invalid");
+    telefono.classList.add("is-valid");
+    telefonoFeedback.textContent = "";
+  } else {
+    telefono.classList.remove("is-valid");
+    telefono.classList.add("is-invalid");
+    telefonoFeedback.textContent = "Número de teléfono inválido. Ej: +593987654321";
+  }
+  validarFormularioCompleto();
+});
+
+// Validar todos los campos antes de habilitar el botón de envío
+function validarFormularioCompleto() {
+  const camposValidos = [
+    usuario.classList.contains("is-valid"),
+    nombre.classList.contains("is-valid"),
+    contrasena.classList.contains("is-valid"),
+    confirmarContrasena.classList.contains("is-valid"),
+    emailInput.classList.contains("is-valid"),
+    edad.classList.contains("is-valid"),
+    telefono.classList.contains("is-valid")
+  ];
+
+  btnEnviar.disabled = !camposValidos.every(Boolean);
+}
+
+// Revalidar cada campo cuando cambia
+[usuario, nombre, contrasena, confirmarContrasena, emailInput, edad, telefono].forEach(input => {
+  input.addEventListener("input", validarFormularioCompleto);
+});
+
+// Manejo del botón Submit
+btnEnviar.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (!btnEnviar.disabled) {
+    alert("Formulario enviado con éxito ✅");
+
+    // Limpiar campos y estilos
+    [edad, telefono, usuario, nombre, contrasena, confirmarContrasena, emailInput].forEach(input => {
+      input.value = "";
+      input.classList.remove("is-valid", "is-invalid");
+    });
+
+    // Limpiar mensajes de error
+    edadFeedback.textContent = "";
+    telefonoFeedback.textContent = "";
+    usuarioFeedback.textContent = "";
+    nombreFeedback.textContent = "";
+    contrasenaFeedback.textContent = "";
+    confirmarContrasenaFeedback.textContent = "";
+    feedback.textContent = "";
+
+    // Deshabilitar botón hasta que vuelva a validarse todo
+    btnEnviar.disabled = true;
+  }
+});
+
 
 // ===== ZONA DE PRÁCTICA DOM =====
 document.addEventListener("DOMContentLoaded", () => {

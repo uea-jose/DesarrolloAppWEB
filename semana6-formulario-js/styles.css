@@ -179,27 +179,13 @@ a:hover {
     }
 }
 
-/* Galería */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
+/* bordes valdiacion */
+
+
+.is-valid {
+  border-color: #28a745 !important;
 }
 
-.gallery img {
-    width: 100%;
-    height: auto;
-    border: 3px solid transparent;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.gallery img.selected {
-    border-color: #3b82f6;
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.7);
-    transform: scale(1.05);
-    z-index: 10;
+.is-invalid {
+  border-color: #dc3545 !important;
 }
