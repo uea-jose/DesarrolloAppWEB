@@ -64,11 +64,20 @@
         <div id="nombreFeedback" class="form-text text-danger"></div>
       </div>
 
-      <div class="mb-3">
-        <label for="contrasena" class="form-label">Contraseña</label>
-        <input type="password" id="contrasena" class="form-control" required>
-        <div id="contrasenaFeedback" class="form-text text-danger"></div>
-      </div>
+<div class="mb-3">
+  <label for="contrasena" class="form-label">Contraseña</label>
+  <input type="password" id="contrasena" class="form-control" required>
+  <div id="contrasenaFeedback" class="form-text text-danger"></div>
+
+  <!-- Lista de requisitos de la contraseña -->
+  <ul id="requisitosContrasena" class="mt-2 ps-3">
+    <li id="req-mayus-minus">❌ Mayúsculas y minúsculas</li>
+    <li id="req-numero">❌ Número (0-9)</li>
+    <li id="req-longitud">❌ 8 caracteres</li>
+    <li id="req-simbolo">❌ Al menos un símbolo o carácter especial</li>
+  </ul>
+</div>
+
 
       <div class="mb-3">
         <label for="confirmarContrasena" class="form-label">Repetir Contraseña</label>

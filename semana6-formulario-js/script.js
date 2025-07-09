@@ -43,19 +43,68 @@ document.addEventListener("DOMContentLoaded", () => {
     validarFormularioCompleto();
   });
 
-  contrasena.addEventListener("input", () => {
-    if (regexContrasena.test(contrasena.value)) {
-      contrasena.classList.add("is-valid");
-      contrasena.classList.remove("is-invalid");
-      contrasenaFeedback.textContent = "";
-    } else {
-      contrasena.classList.add("is-invalid");
-      contrasena.classList.remove("is-valid");
-      contrasenaFeedback.textContent = "8-16 caracteres, al menos 1 mayúscula, 1 minúscula, 1 número y 1 símbolo.";
-    }
-    validarFormularioCompleto();
-  });
+const reqMayusMinus = document.getElementById("req-mayus-minus");
+const reqNumero = document.getElementById("req-numero");
+const reqLongitud = document.getElementById("req-longitud");
+const reqSimbolo = document.getElementById("req-simbolo");
 
+contrasena.addEventListener("input", () => {
+  const valor = contrasena.value;
+
+  const tieneMayus = /[A-Z]/.test(valor);
+  const tieneMinus = /[a-z]/.test(valor);
+  const tieneNumero = /\d/.test(valor);
+  const tieneLongitud = valor.length >= 8;
+  const tieneSimbolo = /[\W_]/.test(valor); // símbolo o guion bajo
+
+  if (tieneMayus && tieneMinus) {
+    reqMayusMinus.classList.add("valido");
+    reqMayusMinus.textContent = "✔️ Mayúsculas y minúsculas";
+  } else {
+    reqMayusMinus.classList.remove("valido");
+    reqMayusMinus.textContent = "❌ Mayúsculas y minúsculas";
+  }
+
+  if (tieneNumero) {
+    reqNumero.classList.add("valido");
+    reqNumero.textContent = "✔️ Número (0-9)";
+  } else {
+    reqNumero.classList.remove("valido");
+    reqNumero.textContent = "❌ Número (0-9)";
+  }
+
+  if (tieneLongitud) {
+    reqLongitud.classList.add("valido");
+    reqLongitud.textContent = "✔️ 8 caracteres";
+  } else {
+    reqLongitud.classList.remove("valido");
+    reqLongitud.textContent = "❌ 8 caracteres";
+  }
+
+  if (tieneSimbolo) {
+    reqSimbolo.classList.add("valido");
+    reqSimbolo.textContent = "✔️ Al menos un símbolo o carácter especial";
+  } else {
+    reqSimbolo.classList.remove("valido");
+    reqSimbolo.textContent = "❌ Al menos un símbolo o carácter especial";
+  }
+
+  // Validación completa
+  if (regexContrasena.test(valor)) {
+    contrasena.classList.add("is-valid");
+    contrasena.classList.remove("is-invalid");
+    contrasenaFeedback.textContent = "";
+  } else {
+    contrasena.classList.add("is-invalid");
+    contrasena.classList.remove("is-valid");
+    contrasenaFeedback.textContent = "8-16 caracteres, al menos 1 mayúscula, 1 minúscula, 1 número y 1 símbolo.";
+  }
+
+  validarFormularioCompleto();
+});
+
+
+  // PARTE DE LA CONTRASEÑA
   confirmarContrasena.addEventListener("input", () => {
     const contrasenaValida = regexContrasena.test(contrasena.value);
     if (
