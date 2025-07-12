@@ -168,6 +168,30 @@ a:hover {
   border-color: #f7a6a6 !important;
 }
 
+/* Clase para ocultar elementos */
+.d-none {
+  display: none !important;
+}
+.btn-quitar {
+  background: linear-gradient(to right, #ffb3ba, #ff8a8a); /* rojo pastel */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 4px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-quitar:hover {
+  background: linear-gradient(to right, #ff9a9a, #ff6b6b);
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 107, 107, 0.4);
+}
+
+
 /* ✅ Media query para móviles */
 @media (max-width: 576px) {
   .pastel-button {
