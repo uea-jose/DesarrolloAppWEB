@@ -1,0 +1,191 @@
+/* Estilo general */
+body {
+    background-color: #e6f0ff;  /* Azul pastel suave futurista */
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+    transition: background-color 0.4s ease;
+}
+
+/* Botones personalizados */
+.pastel-button {
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.4s;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-menta {
+    background: linear-gradient(to right, #00bcd4, #00838f);
+}
+.btn-menta:hover {
+    background: linear-gradient(to right, #0097a7, #006064);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.btn-azul {
+    background: linear-gradient(to right, #3f51b5, #1a237e);
+}
+.btn-azul:hover {
+    background: linear-gradient(to right, #5c6bc0, #283593);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(63, 81, 181, 0.6);
+}
+
+.btn-rosa {
+    background: linear-gradient(to right, #7c4dff, #651fff);
+}
+.btn-rosa:hover {
+    background: linear-gradient(to right, #9575cd, #512da8);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(140, 82, 255, 0.6);
+}
+
+.btn-durazno {
+    background: linear-gradient(to right, #00acc1, #00695c);
+}
+.btn-durazno:hover {
+    background: linear-gradient(to right, #26c6da, #004d40);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+/* Flexbox productos */
+.producto {
+    background: linear-gradient(to bottom right, #c3ddfd, #e0f2ff);
+    padding: 1em;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    color: #0f172a;
+    font-weight: bold;
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.producto:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Título con efecto 3D */
+.titulo-3d {
+    font-size: 1.8rem;
+    color: #3b82f6;
+    text-shadow:
+        1px 1px 0 #bfdbfe,
+        2px 2px 0 #93c5fd,
+        3px 3px 0 #60a5fa;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item {
+    background: linear-gradient(135deg, #3b82f6, #1e40af);
+    color: #f1f5f9;
+    padding: 18px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.grid-item:hover {
+    background: linear-gradient(135deg, #60a5fa, #2563eb);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+/* Títulos */
+h1 {
+    color: #3b82f6;
+    font-weight: normal;
+    margin-top: 1em;
+    text-align: center;
+}
+h2 {
+    font-weight: normal;
+    color: #1e3a8a;
+}
+
+/* Texto pequeño */
+small {
+    font-weight: normal;
+    font-size: 0.8em;
+    color: #64748b;
+}
+
+/* Enlaces */
+a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover {
+    color: #7c3aed;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos responsivos */
+
+/* Teléfonos */
+@media (max-width: 600px) {
+    body {
+        background-color: #dce7f5; /* azul suave más claro */
+        font-size: 14px;
+    }
+}
+
+/* Tabletas */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        background-color: #c7e2f7; /* azul medio pastel */
+        font-size: 16px;
+    }
+}
+
+/* Escritorio */
+@media (min-width: 1025px) {
+    body {
+        background-color: #e6f0ff; /* azul pastel futurista */
+        font-size: 18px;
+    }
+}
+
+/* bordes valdiacion */
+
+
+.is-valid {
+  border-color: #28a745 !important;
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
+}

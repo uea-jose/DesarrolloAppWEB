@@ -1,0 +1,180 @@
+/* Estilo general */
+body {
+  background-color: #eef6fb;  /* azul muy claro pastel */
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #34495e;
+  transition: background-color 0.4s ease;
+}
+
+/* Botones personalizados pastel */
+.pastel-button {
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 4px;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.4s;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-menta {
+  background: linear-gradient(to right, #b2fef7, #4dd0e1);
+}
+.btn-menta:hover {
+  background: linear-gradient(to right, #80deea, #26c6da);
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(38, 198, 218, 0.4);
+}
+
+.btn-azul {
+  background: linear-gradient(to right, #d0e8ff, #7fb3ff);
+}
+.btn-azul:hover {
+  background: linear-gradient(to right, #a4ccff, #5fa3f5);
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(95, 163, 245, 0.5);
+}
+
+.btn-rosa {
+  background: linear-gradient(to right, #f3c4fb, #d38eff);
+}
+.btn-rosa:hover {
+  background: linear-gradient(to right, #e1b0f8, #be81f8);
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(190, 129, 248, 0.5);
+}
+
+.btn-durazno {
+  background: linear-gradient(to right, #ffd4b3, #ffab91);
+}
+.btn-durazno:hover {
+  background: linear-gradient(to right, #ffb68f, #ff8a65);
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 138, 101, 0.4);
+}
+
+/* Producto */
+.producto {
+  background: linear-gradient(to bottom right, #dcefff, #f2faff);
+  padding: 1em;
+  border-radius: 10px;
+  width: 100%; /* ✅ cambia de fijo 200px a 100% */
+  max-width: 250px; /* ✅ máximo tamaño para tarjetas */
+  margin: 0 auto; /* centra dentro de la columna Bootstrap */
+  text-align: center;
+  color: #1e293b;
+  font-weight: bold;
+  box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 9px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Título con efecto 3D pastel */
+.titulo-3d {
+  font-size: 1.8rem;
+  color: #7aa8f7;
+  text-shadow:
+    1px 1px 0 #ddeeff,
+    2px 2px 0 #bdd9f7,
+    3px 3px 0 #a5c8f2;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Grid container pastel */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* ✅ grid responsive */
+  gap: 12px;
+  background-color: #f4faff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item {
+  background: linear-gradient(135deg, #bae6fd, #7dd3fc);
+  color: #1e293b;
+  padding: 18px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  background: linear-gradient(135deg, #cfefff, #93dbfc);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+/* Títulos */
+h1 {
+  color: #60a5fa;
+  font-weight: 500;
+  margin-top: 1em;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 500;
+  color: #3b82f6;
+}
+
+/* Texto pequeño */
+small {
+  font-weight: normal;
+  font-size: 0.8em;
+  color: #64748b;
+}
+
+/* Enlaces */
+a {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #7c3aed;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Validación de formularios con estilo pastel */
+.is-valid {
+  border-color: #80e4a5 !important;
+}
+
+.is-invalid {
+  border-color: #f7a6a6 !important;
+}
+
+/* ✅ Media query para móviles */
+@media (max-width: 576px) {
+  .pastel-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .titulo-3d {
+    font-size: 1.5rem;
+  }
+}
