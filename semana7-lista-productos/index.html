@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito de Perfumes</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+  <style>
+    /* Contenedor principal centrado */
+    .container-central {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container-central">
+
+    <!-- Sección Frascos (generados automáticamente con botón) -->
+    <section id="frascos-section" class="mb-5">
+      <h3 class="text-center text-primary mb-3">🧴 Frascos Disponibles</h3>
+      <ul id="lista-frascos" class="list-group mb-3">
+        <!-- Aquí se insertan los frascos con JS -->
+      </ul>
+      <div class="text-center">
+        <button id="btn-agregar-frasco" class="btn btn-menta">Agregar Frasco</button>
+      </div>
+    </section>
+
+    <!-- Sección perfumes fija, como tienes -->
+    <main class="contenedor mt-5">
+      <div class="text-center p-4 mb-4 bg-light border border-primary rounded shadow-sm">
+        <h3 class="text-primary fw-bold">🛒🛍️✨ Productos en Perfumes 🧴🌬️</h3>
+
+      </div>
+
+      <div class="row text-center">
+        <article class="col-sm-4 mb-3 contenedor-perfume1">
+          <div class="tarjeta producto">
+            <div class="cuerpo-tarjeta">
+              <h5 class="titulo-tarjeta">Perfume 1 🍝</h5>
+              <p class="lead">$15</p>
+              <button class="btn btn-azul btn-sm boton-pastel" data-perfume="Perfume 1" data-precio="15">Agregar</button>
+            </div>
+          </div>
+        </article>
+        <article class="col-sm-4 mb-3 contenedor-perfume2">
+          <div class="tarjeta producto">
+            <div class="cuerpo-tarjeta">
+              <h5 class="titulo-tarjeta">Perfume 2 ⚱💨</h5>
+              <p class="lead">$14</p>
+              <button class="btn btn-azul btn-sm boton-pastel" data-perfume="Perfume 2" data-precio="14">Agregar</button>
+            </div>
+          </div>
+        </article>
+        <article class="col-sm-4 mb-3 contenedor-perfume3">
+          <div class="tarjeta producto">
+            <div class="cuerpo-tarjeta">
+              <h5 class="titulo-tarjeta">Perfume 3 ⚱️</h5>
+              <p class="lead">$13</p>
+              <button class="btn btn-azul btn-sm boton-pastel" data-perfume="Perfume 3" data-precio="13">Agregar</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- Carrito -->
+    <section class="contenedor mt-4">
+      <ul class="list-group" id="carrito"></ul>
+    </section>
+
+    <footer id="footer" class="contenedor mt-5 text-center">
+      <template id="templateFooter">
+        <div class="card">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <!-- Footer carrito -->
+          </div>
+        </div>
+      </template>
+      <p class="mb-0 small">&copy; 2025 Disprint. Todos los derechos reservados.</p>
+    </footer>
+
+  </div>
+
+  <!-- Template para items del carrito -->
+  <template id="template">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <div>
+        <span class="badge bg-primary rounded-pill">1</span>
+        <span class="lead">Producto</span>
+      </div>
+      <div>
+        <p class="lead mb-0">Total: $<span>0</span></p>
+      </div>
+      <div>
+        <button class="btn btn-success btn-sm">+</button>
+        <button class="btn btn-danger btn-sm">-</button>
+      </div>
+    </li>
+  </template>
+
+  <script>
+    // Lógica para generar frascos automáticamente y botón para agregar nuevos
+    const listaFrascos = document.getElementById('lista-frascos');
+    const btnAgregarFrasco = document.getElementById('btn-agregar-frasco');
+    let contadorFrascos = 3;
+
+    // Frascos iniciales
+    const frascosIniciales = [
+      { id: 1, nombre: "Frasco 1" },
+      { id: 2, nombre: "Frasco 2" },
+      { id: 3, nombre: "Frasco 3" },
+    ];
+
+    // Función para pintar frascos
+    function pintarFrascos() {
+      listaFrascos.innerHTML = '';
+      frascosIniciales.forEach(frasco => {
+        const li = document.createElement('li');
+        li.textContent = frasco.nombre;
+        li.classList.add('list-group-item');
+        listaFrascos.appendChild(li);
+      });
+    }
+
+    // Agregar nuevo frasco
+    btnAgregarFrasco.addEventListener('click', () => {
+      contadorFrascos++;
+      frascosIniciales.push({ id: contadorFrascos, nombre: `Frasco ${contadorFrascos}` });
+      pintarFrascos();
+    });
+
+    // Pintar frascos iniciales al cargar la página
+    pintarFrascos();
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
