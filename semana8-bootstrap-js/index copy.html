@@ -1,20 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aromas & Fragancias</title>
-
+  <title>Semana8-bootstrap-js</title>
+  <link rel="stylesheet" href="styles.css" />
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    crossorigin="anonymous" />
-  <!-- Tus estilos personalizados -->
-  <link rel="stylesheet" href="styles.css" />
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-
-<!-- Navbar Bootstrap incluida para móviles -->
+<!-- Navbar Bootstrap incluido pra moviles -->
 <nav class="navbar navbar-expand-lg" style="background: linear-gradient(to right, #d0e8ff, #7fb3ff);">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Aromas & Fragancias</a>
@@ -35,6 +31,7 @@
         </li>
         <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
       </ul>
+
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Buscar aroma, esencia..." aria-label="Buscar">
         <button class="btn pastel-button btn-menta" type="submit">Buscar</button>
@@ -43,8 +40,8 @@
   </div>
 </nav>
 
-<!-- Bienvenida -->
-<div class="container my-3 p-3 bg-light rounded shadow-sm" style="max-width: 600px;">
+
+ <div class="container my-3 p-3 bg-light rounded shadow-sm" style="max-width: 600px;">
   <h2 class="text-primary text-center">Bienvenido a Aromas & Fragancias</h2>
   <p class="text-center text-secondary">
     Descubre los mejores aromas y esencias para cada ocasión. Calidad y frescura garantizadas.
@@ -54,7 +51,8 @@
   </div>
 </div>
 
-<!-- Carrusel -->
+
+<!-- Carrusel de imágenes -->
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="max-height: 500px; overflow: hidden;">
   <!-- Indicadores -->
   <div class="carousel-indicators">
@@ -79,6 +77,9 @@
     <div class="carousel-item">
       <img src="Images_/carrusel4.png" class="d-block w-100" alt="Imagen 4" style="height: 500px; object-fit: cover;">
     </div>
+    <!-- <div class="carousel-item">
+      <img src="imagen5.jpg" class="d-block w-100" alt="Imagen 5" style="height: 500px; object-fit: cover;"> -->
+    </div>
   </div>
 
   <!-- Controles -->
@@ -90,7 +91,6 @@
   </button>
 </div>
 
-<!-- Productos destacados -->
 <div class="container my-5">
   <h3 class="mb-4 text-center text-primary">Nuestros Productos Destacados</h3>
   <div class="table-responsive">
@@ -110,38 +110,39 @@
           <td>Femenino</td>
           <td>$15.00</td>
           <td><span class="badge bg-success">En Stock</span></td>
-          <td>De CAROLINA HERRERA - toque fresco de jazmín y rosa, ideal para eventos festivos</td>
+          <td>De CAROLINA HRERRA -toque fresco de jazmín y rosa, ideal para eventos festivos </td>
         </tr>
         <tr>
           <td>INVICTUS</td>
           <td>Masculino</td>
           <td>$20.00</td>
           <td><span class="badge bg-danger">Agotado</span></td>
-          <td>De Paco Rabanne, con notas marinas y cítricas, ideal para uso diario</td>
+          <td>De Paco Ravanne, con notas marinas y cítricas, ideal para uso diario</td>
         </tr>
         <tr>
           <td>Lady Millo Lucky</td>
           <td>Femenino</td>
           <td>$15.50</td>
           <td><span class="badge bg-success">En Stock</span></td>
-          <td>De Paco Rabanne, con un toque afrutado y floral. Ideal para noches inolvidables</td>
+          <td>De Paco Ravanne, con un toque afrutado y floralsi. Ideal para noches inolvidables </td>
         </tr>
         <tr>
-          <td>Black Code</td>
+          <td>Blac Code</td>
           <td>Masculino</td>
           <td>$17.00</td>
           <td><span class="badge bg-warning text-dark">Pocas unidades</span></td>
-          <td>De Giorgio Armani, con toques especiados y amaderados. Ideal para la noche</td>
+          <td>De Giorgio Armani, con toque especiadas y amaderadas. Ideal para la noche</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 
-<!-- ✅ Bootstrap JS al final  -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-  crossorigin="anonymous"></script>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
 </html>
