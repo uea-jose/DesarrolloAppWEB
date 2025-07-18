@@ -145,6 +145,24 @@ a:hover {
 }
 
 /* ===========================
+   FEMENINO
+=========================== */
+
+/* Estilo personalizado para que el ícono del botón hamburguesa sea visible */
+.navbar-toggler {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.6); /* fondo claro translúcido */
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(80, 80, 80, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  filter: none;
+}
+
+
+/* ===========================
    MEDIA QUERIES
 =========================== */
 
@@ -157,6 +175,17 @@ a:hover {
 /* ===========================
    ESTILOS EXCLUSIVOS: MASCULINOS.HTML
 =========================== */
+
+.navbar-toggler {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(80, 80, 80, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
 
 .img-masculina {
   max-width: 100%;
@@ -227,6 +256,27 @@ body.femenina {
   transform: scale(1.05);
   box-shadow: 0 0 12px rgba(190, 129, 248, 0.5);
 }
+
+
+/* ===========================
+   ESTILOS INCIO INDEX.HTML
+=========================== */
+/* BOTÓN  VISIBLE SOBRE FONDO MOVEIL */
+.navbar-toggler {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7); /* fondo claro translúcido */
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(80, 80, 80, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* BOTÓN CHEVERE PAGIN BUSCAR INCIO GRANDE */
+
+/* BOTÓN HAMBURGUESA VISIBLE SOBRE FONDO PASTEL */
+
 
 /* ===========================
    ESTILOS PARA esencias.html
