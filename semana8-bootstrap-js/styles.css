@@ -273,3 +273,36 @@ body.femenina {
 
 
 
+/* =======================================
+   CARRUSEL
+========================================== */
+/* === Estilos personalizados para el carrusel === */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 5%;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-size: 50% 50%;
+}
