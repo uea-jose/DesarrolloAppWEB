@@ -77,29 +77,63 @@ a:hover {
 }
 
 /* ===========================
-   BOTONES PASTEL 
+   BOTONES PASTEL para inicio pagina indesx
 =========================== */
 
 .pastel-button {
-  border: none;
-  border-radius: 12px;
-  color: white;
-  padding: 12px 24px;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 10px 4px;
+  position: relative;               /* necesario para el brillo */
+  overflow: hidden;                /* oculta lo que se sale */
+  border: none;                    /* sin borde */
+  border-radius: 12px;             /* bordes redondeados */
+  color: white;                    /* texto blanco */
+  padding: 12px 24px;              /* espacio interior */
+  font-size: 16px;                 /* tamaño de letra */
+  cursor: pointer;                 /* mano al pasar */
+  margin: 10px 4px;                /* espacio alrededor */
   transition: transform 0.3s, box-shadow 0.3s, background 0.4s;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2); /* sombra suave */
+  animation: bounce 2.5s infinite; /* animación de rebote suave */
 }
 
+/* Fondo degradado estilo menta */
 .btn-menta {
   background: linear-gradient(to right, #b2fef7, #4dd0e1);
 }
+
+/* Hover: agranda, cambia fondo y resplandece */
 .btn-menta:hover {
   background: linear-gradient(to right, #80deea, #26c6da);
   transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(38, 198, 218, 0.4);
+  box-shadow: 0 0 12px rgba(38, 198, 218, 0.5);
 }
+
+/* Brillo al pasar el mouse */
+.pastel-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.pastel-button:hover::after {
+  left: 130%;
+}
+
+/* Rebote automático */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
 
 .btn-azul {
   background: linear-gradient(to right, #d0e8ff, #7fb3ff);
