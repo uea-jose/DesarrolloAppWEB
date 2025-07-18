@@ -185,7 +185,7 @@ body.femenina {
 
 /* Botón Rosa Pastel */
 .btn-rosa {
-  background: linear-gradient(to right, #f3c4fb, #d38eff);
+  background: linear-gradient(to right, #19181a, #d38eff);
 }
 
 .btn-rosa:hover {
@@ -198,8 +198,28 @@ body.femenina {
    ESTILOS PARA esencias.html
 =========================== */
 
+/* Botón pastel personalizado */
+.pastel-button {
+  padding: 0.6em 1.5em;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: none;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+/* Botón durazno */
+.btn-durazno {
+  background-color: #ffb88c;
+}
+
+.btn-durazno:hover {
+  background-color: #ff9966;
+  transform: scale(1.05);
+}
+
 /* =======================================
-   ENCABEZADO ESTILO BANNER CON IMAGEN
+  ESTITL FLOMULARIO
 ========================================== */
 .banner-esencias {
   background-color: #f3f8fd;
