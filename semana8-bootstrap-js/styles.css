@@ -249,27 +249,27 @@ body.femenina {
 .img-esencias-sola:hover {
   transform: scale(1.04);
 }
-/* Botón durazno con texto más visible */
-.btn-durazno {
-  background: linear-gradient(to right, #ffa07a, #ff7f50);  /* colores más intensos */
-  color: #fffaf0;  /* blanco hueso para más contraste */
+/* Botón para pagina contacto */
+.btn-masculino {
+  background: linear-gradient(to right, #2c3e50, #34495e);  /* azul grisáceo */
+  color: #ecf0f1;  /* gris muy claro */
   border: none;
   border-radius: 12px;
   padding: 12px 24px;
   font-size: 16px;
-  font-weight: bold; /* 👈 Hacemos el texto más visible */
+  font-weight: bold;
   cursor: pointer;
   margin: 10px 4px;
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.btn-durazno:hover {
-  background: linear-gradient(to right, #ff8a65, #ff6b4d);
+.btn-masculino:hover {
+  background: linear-gradient(to right, #1c2833, #2e4053);
   color: #ffffff;
   transform: scale(1.05);
-  box-shadow: 0 0 16px rgba(255, 107, 107, 0.4);
+  box-shadow: 0 0 16px rgba(44, 62, 80, 0.4);
 }
 
 
-/* (Aquí podrías añadir más secciones exclusivas para femeninos, contacto, etc.) */
+
