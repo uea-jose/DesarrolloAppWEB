@@ -306,3 +306,22 @@ body.femenina {
   height: 40px;
   background-size: 50% 50%;
 }
+/* =======================================
+   TABLA
+========================================== */
+
+/* Colores pastel personalizados */
+.badge.bg-success {
+  background-color: #a8e6cf !important;  /* Verde pastel */
+  color: #256029;  /* Verde musgo oscuro para contraste */
+}
+
+.badge.bg-danger {
+  background-color: #ff8b94 !important;  /* Rojo pastel */
+  color: #6e1f1f;  /* Rojo oscuro para texto */
+}
+
+.badge.bg-warning {
+  background-color: #fff3b0 !important;  /* Amarillo pastel */
+  color: #7a6b00;  /* Amarillo oscuro para texto */
+}
