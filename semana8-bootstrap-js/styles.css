@@ -429,3 +429,62 @@ body.femenina {
   background-color: #fff3b0 !important;  /* Amarillo pastel */
   color: #7a6b00;  /* Amarillo oscuro para texto */
 }
+
+/* =======================================
+   botones rede soacioles
+========================================== */
+.btn-red-social {
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+/* Facebook pastel */
+.btn-facebook {
+  background-color: #a3c0ff; /* azul pastel */
+  border: 2px solid #7a9eff;
+}
+
+.btn-facebook:hover {
+  background-color: #7a9eff; /* azul más intenso */
+  border-color: #507acc;
+}
+
+/* Instagram pastel */
+.btn-instagram {
+  background: linear-gradient(45deg, #ffd1e8, #ffd9b3); /* rosa y melocotón pastel */
+  border: 2px solid #ffb3cc;
+  color: #6b3e54;
+}
+
+.btn-instagram:hover {
+  background: linear-gradient(45deg, #ffb3cc, #ffcc99);
+  border-color: #ff8fb3;
+  color: #422633;
+}
+
+/* TikTok pastel kawaii */
+.btn-tiktok {
+  background-color: #2c2c2c; /* negro grisáceo, suave */
+  border: 2px solid #444444; /* borde gris oscuro */
+  color: #f0f0f0; /* texto blanco suave */
+}
+
+.btn-tiktok:hover {
+  background-color: #1a1a1a; /* negro un poco más intenso */
+  border-color: #555555;
+  color: #ffffff;
+}
+
+
+/* Iconos de bootstrap ajustados para verse mejor */
+.btn-red-social i {
+  font-size: 1.2rem;
+}
